@@ -1,20 +1,19 @@
 {
     "name": "YouAd Skipper",
-    "version": "2.0.0",
-    "manifest_version": 2,
+    "version": "2.1.0",
+    "manifest_version": 3,
     "description": "Sample Chrome Extension",
     "content_scripts": [{
         "matches": ["https://www.youtube.com/*"],
         "js": ["YouAdSkipper.js"]
     }],
     "background": {
-        "scripts": ["YouAdSkipper.js"]
+        "service_worker": "YouAdSkipper.js"
     },
     "icons": {
         "16": "icon16.png",
         "48": "icon48.png",
         "128": "icon128.png"
-    },
-    "permissions": ["activeTab"]
-  }
+    }
+}
 
